@@ -1,0 +1,172 @@
+/*==================*/
+/* GLOBAL */
+/*==================*/
+
+	.contentFullW {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	.content1280W {
+		width: 1280px;
+		margin:0 auto;
+		clear:both;
+		overflow:auto;
+	}
+	.bgImgStickyL {
+    left: 0px;
+    background-position: center center;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background-size: auto 100%;
+}
+
+
+
+
+
+/*==================*/
+/* INTRO */
+/*==================*/
+
+/* gestion des triangles */
+#intro-nav:before {
+	content:url('img/line-head3.png');
+	position:absolute;
+	left:-95px;
+	top: 0;
+		}
+
+
+
+
+
+/* gestion gauche droite */	
+#introOnepage {
+	background-image: url("img/intro-shadow.jpg"); 
+background-position:  bottom center;
+background-repeat: repeat-x;
+	background-color: #efefef;
+	height: 663px;
+border-bottom: 2px solid#ffffff;
+
+	.content1280W {
+	display:table;
+	}
+	#logo,
+	#intro-nav {
+	position: relative;
+	z-index: 100;
+	display:table-cell;
+	width:50%;
+	text-align:center;
+	}
+	#logo{
+	width:55%;
+	}
+	#intro-nav {
+	width:45%;
+	}
+
+
+
+
+	#intro-nav {
+		position: relative;
+	background-color: #efefef;
+background-image: url("img/bg-intro-menu.png"), url("img/intro-shadow.jpg"); 
+background-position: top center, bottom center;
+background-repeat: no-repeat, repeat-x;
+	}
+
+	#logo {
+
+		img {
+			margin:45px 0 100px 0;
+		}
+		.site-title {
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+			a {
+				font-family: "Open Sans",sans-serif;
+				text-decoration: none;
+				font-size: 50px;
+				font-weight:300;
+				color: rgb(239, 239, 239);
+			}
+		}
+	}
+
+/* gestion bg left */
+.bgImgStickyL {
+    background-image: url("img/bg-intro.png");
+    background-color: #808080;
+    width: 55%;
+}
+
+}
+
+
+
+
+
+/*==================*/
+/* gestion du menu */
+/*==================*/
+#intro-nav .main-navigation {
+position: absolute;
+bottom: 50px;
+left: 0;
+right: 0;
+}
+#menu-intro {
+
+	a {
+				font-size:22px;
+				text-transform: uppercase;
+				font-weight: bold;
+				padding:0 20px;
+				color: $color__main-1-red;
+	}
+}
+
+
+
+
+/*==================*/
+/* A LA UNE */
+/*==================*/
+#alaUne {
+	background-color: #efefef;
+	.thumb,
+	.content {
+		float:left;
+	}
+.bgImgStickyL {
+    background-image: url("img/bg-intro.png");
+    background-color: #efefef;
+    width: 40%;
+}
+	.content {
+		width: 60%;
+		float:right;
+	}	
+}
+
+
+/*==================*/
+/* MENU PRINCIPAL  */
+/*==================*/
+#menu-main-onepage {
+	background-color: #000000;
+	background-image: url(img/pao-logo-mini.png);
+	background-position: top center;
+	background-repeat: no-repeat;
+	overflow: auto;
+	height:70px;
+}
