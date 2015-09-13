@@ -48,14 +48,37 @@
 
 <div id="alaUne" class="contentFullW">
 <div class="content1280W">
-	<div class="bgImgStickyL">wxxxxx</div>
-	<div class="content">
-	<p>Harum trium sententiarum nulli prorsus assentior. Nec enim illa prima vera est, ut, quem ad modum in se quisque sit, sic in amicum sit animatus. Quam multa enim, quae nostra causa numquam faceremus, facimus causa amicorum! precari ab indigno, supplicare, tum acerbius in aliquem invehi insectarique vehementius, quae in nostris rebus non satis honeste, in amicorum fiunt honestissime; multaeque res sunt in quibus de suis commodis viri boni multa detrahunt detrahique patiuntur, ut iis amici potius quam ipsi fruantur.</p>
-	</div>
-</div>
-
-
-</div>
+		<?php
+		$recentPosts = new WP_Query();
+		$sticky = get_option('sticky_posts');
+		$args = array(
+		 'showposts' => 1,
+		 'post__in' => $sticky,
+		 'caller_get_posts' => 1,
+		 'orderby' => 'date',
+		 );
+		$recentPosts->query($args);
+		while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+		<?php if ( has_post_thumbnail()) : ?>
+			<!-- Retrouve l'URL de l'image originale associée au thumbnail -->
+			<?php
+			  $image_id = get_post_thumbnail_id();
+			  $image_url = wp_get_attachment_image_src($image_id,'large');
+			  $image_url = $image_url[0];
+			  $name = $term->name;
+			?>
+		<div class="bgImgStickyL" style="background-image:url('<?php echo $image_url; ?>')">
+		<?php the_title_attribute(); ?>
+		</div> <!-- fin bgImgStickyL -->
+		<div class="content">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		
+		<?php the_excerpt(); ?>
+		</div>
+		<?php endif; ?>
+		<?php endwhile; ?>
+</div> <!-- fin .content1280W -->
+</div> <!-- fin #alaUne -->
 	<div class="contentFullW">
 		<div id="menu-main-onepage" >
 		<nav id="site-navigation" class="main-navigation" role="navigation">

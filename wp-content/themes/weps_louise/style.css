@@ -678,6 +678,27 @@ a:hover, a:active {
   padding: 0 50px;
 }
 
+/*==================*/
+/* MENU JAUNE ====  */
+/*==================*/
+/* line 29, sass/navigation/_navigation.scss */
+#menuJaune {
+  background-color: #ffff33;
+  height: 30px;
+  line-height: 30px;
+}
+/* line 31, sass/navigation/_navigation.scss */
+#menuJaune ul li {
+  list-style-type: none;
+  float: left;
+  padding: 0 20px;
+}
+/* line 35, sass/navigation/_navigation.scss */
+#menuJaune ul li a {
+  font-size: 14px;
+  color: #000000;
+}
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -1109,20 +1130,26 @@ object {
 }
 /* line 150, sass/section/_section.scss */
 #alaUne .bgImgStickyL {
-  background-image: url("img/bg-intro.png");
+  background-image: none;
+  /*image par defaut ├á definir*/
+  background-size: 100% auto;
+  background-position: center center;
   background-color: #efefef;
   width: 40%;
 }
-/* line 155, sass/section/_section.scss */
+/* line 157, sass/section/_section.scss */
 #alaUne .content {
   width: 60%;
   float: right;
+  background-image: url("img/gouttes2.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 /*==================*/
 /* MENU PRINCIPAL  */
 /*==================*/
-/* line 165, sass/section/_section.scss */
+/* line 170, sass/section/_section.scss */
 #menu-main-onepage {
   background-color: #000000;
   background-image: url(img/pao-logo-mini.png);

@@ -21,3 +21,24 @@
 		padding:0 50px;
 	}
 }
+
+
+/*==================*/
+/* MENU JAUNE ====  */
+/*==================*/
+#menuJaune {
+	ul {
+		li {
+			list-style-type: none;
+			float: left;
+			padding:0 20px;
+			a {
+				font-size:14px;
+				color:#000000;
+			}
+		}
+	}
+	background-color: #ffff33;
+	height:30px;
+	line-height:30px;
+}

@@ -148,14 +148,19 @@ right: 0;
 		float:left;
 	}
 .bgImgStickyL {
-    background-image: url("img/bg-intro.png");
+    background-image: none; /*image par defaut à definir*/
+    background-size: 100% auto;
+    background-position: center center;
     background-color: #efefef;
     width: 40%;
 }
 	.content {
 		width: 60%;
 		float:right;
-	}	
+		background-image: url("img/gouttes2.png");
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
 }
 
 
